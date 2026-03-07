@@ -1,132 +1,211 @@
-# 📘 MACHINE LEARNING – Foundations Repository
+# 📘 Machine Learning – Foundations Repository
 
 ## 👩‍💻 Overview
+This repository documents my structured journey through **Machine Learning fundamentals**.  
+The focus is not just on using libraries but on **understanding the mathematics, optimization, and geometry behind ML algorithms**.
 
-This repository contains my structured journey through Machine Learning fundamentals — implemented from scratch and validated using libraries like `scikit-learn`.
+Each concept is explored through:
 
-The goal is not just to use models, but to understand the mathematics, optimization, and geometry behind them.
+• Mathematical derivations  
+• Implementations from scratch  
+• Validation using **scikit-learn**
 
----
-
-## 📂 Repository Structure
-
-### 📊 Regression
-
-- **SimpleLinearRegression.ipynb**  
-  - OLS derivation  
-  - Normal Equation  
-  - Gradient Descent implementation  
-
-- **MultipleLinearRegression.ipynb**  
-  - Matrix formulation  
-  - Multicollinearity  
-  - Error metrics  
-
-- **polynomialRegression.ipynb**  
-  - Feature transformation  
-  - Underfitting vs Overfitting  
-
-- **polynomialLinearRegression.ipynb**  
-  - Polynomial regression  
-  - Bias–Variance analysis  
+The goal is to build a **strong theoretical and practical foundation in Machine Learning**.
 
 ---
 
-### ⚡ Optimization
+# 📂 Repository Structure
 
-- **GradientDescent.ipynb**  
-  - Batch Gradient Descent  
-  - Stochastic Gradient Descent  
-  - Mini-batch Gradient Descent  
+## 📊 Regression
 
-- **Gradient_descent_logisticRegression.ipynb**  
-  - Sigmoid function  
-  - Cross-entropy loss  
-  - Logistic Regression from scratch  
-  - Comparison with sklearn  
+### Simple Linear Regression
+**File:** `SimpleLinearRegression.ipynb`
 
----
-
-### 🧠 Regularization
-
-- **RidgeRegularization.ipynb**  
-  - L2 penalty derivation  
-  - Effect of lambda  
-  - Stability under multicollinearity  
-
-- **lassoRegularization.ipynb**  
-  - L1 penalty  
-  - Sparsity  
-  - Feature selection  
-
-- **ElasticNetRegression.ipynb**  
-  - Combination of L1 and L2  
-  - Correlated features behavior  
+Topics covered:
+- Ordinary Least Squares (OLS)
+- Normal Equation
+- Gradient Descent implementation
+- Residual analysis
 
 ---
 
-### 📈 Model Evaluation
+### Multiple Linear Regression
+**File:** `MultipleLinearRegression.ipynb`
 
-- **PerformanceMetrices.ipynb**  
-  - Accuracy  
-  - Precision (Macro / Micro / Weighted)  
-  - Recall  
-  - F1-score  
-  - Confusion Matrix  
-
----
-
-### 📁 Datasets
-
-- `heart.csv` – Binary classification dataset  
-- `placement.csv` – Regression / classification dataset  
+Topics covered:
+- Matrix formulation
+- Multicollinearity
+- Error metrics
+- Model interpretation
 
 ---
 
-## 🔍 Key Concepts Covered
+### Polynomial Regression
+**Files:**  
+`polynomialRegression.ipynb`  
+`polynomialLinearRegression.ipynb`
 
-- Linear Algebra for ML  
-- Basis & Span  
-- Linearly Independent & Dependent Vectors  
-- Multicollinearity  
-- Bias–Variance Tradeoff  
-- Maximum Likelihood Estimation  
-- Cross Entropy Loss  
-- Decision Boundaries  
-- Regularization Effects  
+Topics covered:
+- Feature transformation
+- Underfitting vs Overfitting
+- Bias–Variance tradeoff
 
 ---
 
-## 🎯 Objective
+# ⚡ Optimization
 
-This repository focuses on:
+### Gradient Descent
+**File:** `GradientDescent.ipynb`
+
+Topics covered:
+- Batch Gradient Descent
+- Stochastic Gradient Descent
+- Mini-Batch Gradient Descent
+- Learning rate behavior
+
+---
+
+### Logistic Regression (From Scratch)
+**File:** `Gradient_descent_logisticRegression.ipynb`
+
+Topics covered:
+- Perceptron intuition
+- Sigmoid function
+- Cross-Entropy Loss
+- Gradient Descent derivation
+- Comparison with `sklearn`
+
+---
+
+### Multiclass Logistic Regression
+**File:** `MulticlassLogisticRegression.ipynb`
+
+Topics covered:
+- Multinomial classification
+- Softmax intuition
+- sklearn implementation
+
+---
+
+# 🧠 Regularization
+
+### Ridge Regression
+**File:** `RidgeRegularization.ipynb`
+
+Topics covered:
+- L2 penalty
+- Effect of lambda
+- Handling multicollinearity
+
+---
+
+### Lasso Regression
+**File:** `lassoRegularization.ipynb`
+
+Topics covered:
+- L1 penalty
+- Sparsity
+- Feature selection
+
+---
+
+### Elastic Net
+**File:** `ElasticNetRegression.ipynb`
+
+Topics covered:
+- Combination of L1 and L2 penalties
+- Behavior with correlated features
+
+---
+
+# 🌳 Decision Trees
+
+### Decision Tree Classification
+**File:** `DecisionTrees.ipynb`
+
+Topics covered:
+- Gini impurity
+- Information gain intuition
+- Tree visualization
+- Hyperparameter tuning using GridSearchCV
+
+---
+
+# 📈 Model Evaluation
+
+### Performance Metrics
+**File:** `PerformanceMetrics.ipynb`
+
+Topics covered:
+- Accuracy
+- Precision (Macro / Micro / Weighted)
+- Recall
+- F1-score
+- Confusion Matrix
+
+---
+
+# 📁 Datasets
+
+- `heart.csv` → Binary classification dataset  
+- `placement.csv` → Regression / classification dataset  
+- `Iris.csv` → Multiclass classification dataset
+
+---
+
+# 🔍 Key Concepts Covered
+
+This repository explores several foundational ML concepts:
+
+- Linear Algebra for ML
+- Basis and Span
+- Linearly Independent & Dependent Vectors
+- Multicollinearity
+- Bias–Variance Tradeoff
+- Maximum Likelihood Estimation
+- Cross-Entropy Loss
+- Decision Boundaries
+- Regularization Effects
+
+---
+
+# 🚀 Tools Used
+
+- Python
+- NumPy
+- Pandas
+- Matplotlib
+- Scikit-learn
+
+---
+
+# 🎯 Objective
+
+This repository focuses on developing **deep conceptual clarity in Machine Learning** through:
 
 ✔ Mathematical derivations  
 ✔ Implementation from scratch  
 ✔ Understanding optimization dynamics  
-✔ Comparing theory with sklearn  
+✔ Comparing theoretical models with sklearn implementations
 
 ---
 
-## 🚀 Tools Used
+# 📌 Note
 
-- Python  
-- NumPy  
-- Pandas  
-- Matplotlib  
-- Scikit-learn  
+Each model is implemented in two ways:
 
----
-
-## 📌 Note
-
-All models are implemented both:
-
-- From scratch (for conceptual clarity)  
-- Using sklearn (for validation & comparison)
+1️⃣ **From scratch** – to understand the underlying mathematics  
+2️⃣ **Using sklearn** – to validate results and compare implementations
 
 ---
 
-### 🚀 Continuous Learning
+# 🚀 Continuous Learning
 
-This repository reflects a strong foundation-first approach to Machine Learning — focusing on depth, structure, and mathematical clarity.
+This repository reflects a **foundation-first approach to Machine Learning**, focusing on:
+
+• Conceptual clarity  
+• Mathematical intuition  
+• Structured learning  
+• Practical implementation
+
+More models and experiments will be added as the journey progresses.

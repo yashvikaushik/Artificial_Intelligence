@@ -13,19 +13,46 @@ class feedback(BaseModel):
 
 parser=PydanticOutputParser(pydantic_object=feedback)
 
+parser1=StrOutputParser()
+
 
 model=ChatOpenAI(model='gpt-4')
 
 prompt1=PromptTemplate(
-    template='classify the user feedback as positive or negative {text},{format_instructions}',
+    template='classify the user feedback as positive or negative ' \
+    '{text}' \
+    '{format_instructions}',
     input_variables=['text'],
     partial_variables={'format_instructions':parser.get_format_instructions()}
 )
 
-chain=prompt1 | model | parser 
+prompt2=PromptTemplate(
+    template='write an appropriate response to this positive feedback: {text}',
+    input_variables=['text']
+)
 
-print(chain.invoke({'text':'this is a terrible phone'}).feedback)
+prompt3=PromptTemplate(
+    template='write an appropriate response to this negative feedback: {text}',
+    input_variables=['text']
+)
 
-print(chain)
+
+classifier_chain=prompt1 | model | parser 
+
+branch_chain=RunnableBranch(
+     (lambda x:x.sentiments=='positive',prompt2 | model | parser1),
+     (lambda x:x.sentiments=='negative',prompt3 | model | parser1),
+     RunnableLambda(lambda x: 'could not find sentiments')
+)
+
+text='''
+Supervised learning is a type of machine learning where models are trained on labeled datasets, meaning each input is paired with a correct output. The model learns the relationship between inputs and outputs and is commonly used for tasks like classification (e.g., spam detection) and regression (e.g., predicting prices). In contrast, unsupervised learning deals with unlabeled data, where the model explores the data to identify hidden patterns, structures, or groupings without any predefined answers—this is often used for clustering and dimensionality reduction. Reinforcement learning takes a different approach, where an agent interacts with an environment and learns by receiving rewards or penalties for its actions. Over time, the agent improves its decision-making to maximize cumulative rewards, making it useful for applications like game playing, robotics, and autonomous systems.
+
+'''
+
+chain=classifier_chain | branch_chain
+
+result=chain.invoke({'text':text})
+print(result)
 
 

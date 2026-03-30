@@ -18,12 +18,19 @@ parser1=StrOutputParser()
 
 model=ChatOpenAI(model='gpt-4')
 
-prompt1=PromptTemplate(
-    template='classify the user feedback as positive or negative ' \
-    '{text}' \
-    '{format_instructions}',
+prompt1 = PromptTemplate(
+    template="""
+    Classify the following text strictly as either "positive" or "negative".
+    Do NOT use any other label like neutral.
+
+    {text}
+
+    {format_instructions}
+    """,
     input_variables=['text'],
-    partial_variables={'format_instructions':parser.get_format_instructions()}
+    partial_variables={
+        'format_instructions': parser.get_format_instructions()
+    }
 )
 
 prompt2=PromptTemplate(
@@ -54,5 +61,7 @@ chain=classifier_chain | branch_chain
 
 result=chain.invoke({'text':text})
 print(result)
+
+chain.get_graph().print_ascii()
 
 

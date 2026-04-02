@@ -1,0 +1,11 @@
+Sam Altman is an American entrepreneur, investor, and technology leader best known for his role as the CEO of OpenAI. He was born on April 22, 1985, in Chicago, Illinois, and grew up in St. Louis, Missouri. From a young age, Altman showed a strong interest in computers and programming, receiving his first computer at the age of eight.
+
+Altman attended Stanford University, where he studied computer science. However, he dropped out in 2005 to co-found his first startup, Loopt, a location-based social networking mobile application. Although Loopt did not achieve massive commercial success, it helped establish Altman as a promising entrepreneur in Silicon Valley.
+
+In 2014, Altman became the president of Y Combinator, one of the most prestigious startup accelerators in the world. During his tenure, he helped fund and mentor several successful startups, including Airbnb, Dropbox, and Stripe. His leadership significantly expanded Y Combinator’s influence in the startup ecosystem.
+
+Altman later co-founded OpenAI in 2015 with the goal of ensuring that artificial general intelligence (AGI) benefits all of humanity. Under his leadership, OpenAI developed advanced AI systems such as GPT models, which are widely used in applications ranging from chatbots to content generation.
+
+He is known for his forward-thinking views on technology, artificial intelligence, and the future of society. Altman has frequently spoken about the importance of responsible AI development, universal basic income, and long-term global challenges.
+
+Today, Sam Altman is considered one of the most influential figures in the field of artificial intelligence and continues to play a major role in shaping the future of technology.
